@@ -1,0 +1,9 @@
+{
+  "controlPoints": [
+    { "id": 1, "name": "Centro Rio Mamore", "salinidad": "0.2", "ph"  : "0.8", "alcalinidad" :"2,4" , "fecha" : "12/2/2016" },
+    { "id": 2, "name": "Centro Rio Pilcomayo", "salinidad": "0.1", "ph"  : "0.8", "alcalinidad" :"2,5" , "fecha" : "22/2/2016" },
+    { "id": 3, "name": "Centro Rio Desaguadero", "salinidad": "0.4", "ph"  : "0.9", "alcalinidad" :"2,6" , "fecha" : "25/2/2016" },
+    { "id": 4, "name": "Centro Rio la paz", "salinidad": "0.5", "ph"  : "0.15", "alcalinidad" :"2,1" , "fecha" : "17/2/2016" },
+    { "id": 5, "name": "Centro Rio Madre de tios", "salinidad": "0.6", "ph"  : "0.7", "alcalinidad" :"2,8" , "fecha" : "02/2/2016" }
+  ]
+}

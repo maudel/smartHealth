@@ -1,0 +1,29 @@
+<lx-dialog id="{{ selectLocation.dialogId }}">
+  <lx-dialog-header>
+    <div class="toolbar bgc-primary pl++">
+      <span class="toolbar__label tc-white fs-title">
+        Seleccione Ubicación
+      </span>
+
+      <div class="toolbar__right">
+        <lx-button lx-size="l" lx-color="white" lx-type="icon" lx-dialog-close>
+          <i class="mdi mdi-close"></i>
+        </lx-button>
+      </div>
+    </div>
+  </lx-dialog-header>
+
+  <lx-dialog-content>
+    <div class="p+">
+      <div map-lazy-load="https://maps.google.com/maps/api/js">
+        <ng-map center="41,-87" zoom="3"></ng-map>
+      </div>
+    </div>
+  </lx-dialog-content>
+
+  <lx-dialog-footer>
+    <lx-button lx-color="orange" lx-type="flat" lx-dialog-close>GPS</lx-button>
+    <lx-button lx-color="green" lx-type="flat" lx-dialog-close>Elegir Ubicación</lx-button>
+    <lx-button lx-color="red" lx-type="flat" lx-dialog-close>Cancel</lx-button>
+  </lx-dialog-footer>
+</lx-dialog>

@@ -1,0 +1,54 @@
+<div class="dashboard tc-white-1 p+" flex-container="row" flex-column="12">
+  <div flex-item="6">
+    <div class="p+">
+      <div class="card">
+        <div class="card__img card__img--top">
+          <img src="assets/images/VSH.png">
+          <span class="fs-headline tc-white-1 display-block">Lorem Ipsum</span>
+        </div>
+
+        <div class="p+">
+          <span class="fs-subhead tc-black-2 display-block">
+            SMARTHEALTH se concibio como una solucion para el control y diagnostico de enfermedades cardiovasculares.
+          </span>
+          <div class="paragraph fs-body-1">
+            <p>
+              Titulo
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div flex-item="6">
+    <div class="p+">
+      <div class="card">
+        <div class="p+">
+          <strong class="fs-headline display-block"></strong>
+          <div class="data-table-container" style="color: black">
+            <highchart id="chart1" config="home.chartConfig"></highchart>
+            <h2 class="tc-black">Datos Personales del Paciente</h2>
+            <lx-text-field lx-label="Nombres y Apellidos" lx-allow-clear="true" lx-fixed-label="true" lx-icon="account">
+              <input type="text" ng-model="home.paciente.nombres">
+            </lx-text-field>
+            <lx-text-field lx-label="Numero de Telefono o Celular" lx-fixed-label="true" lx-icon="phone">
+              <input type="text" ng-model="home.paciente.telefono">
+            </lx-text-field>
+            <lx-text-field lx-label="Sala" lx-fixed-label="true" lx-icon="city">
+              <input type="text" ng-model="home.paciente.ubicacion">
+            </lx-text-field>
+            <h2 class="tc-black">Medicion de Datos</h2>
+            <lx-text-field lx-label="Pulso Cardiaco" lx-fixed-label="true" lx-icon="heart">
+              <input type="text" ng-model="home.paciente.pulsoCardiaco">
+            </lx-text-field>
+            <lx-text-field lx-label="Ritmo Cardiaco" lx-fixed-label="true" lx-icon="heart">
+              <input type="text" ng-model="home.paciente.ritmoCardiaco">
+            </lx-text-field>
+            <div> {{ home.presion || json}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

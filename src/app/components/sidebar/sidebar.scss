@@ -1,0 +1,43 @@
+.sidebar-overlay {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 998;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition-property: opacity;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.sidebar-overlay.sidebar--shown {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sidebar {
+  position: fixed;
+  top: 60px;
+  bottom: 0px;
+  left: -260px;
+
+  z-index: 998;
+  width: 260px;
+  border-right: 1px solid #DDD;
+  background-color: #FFF;
+  transition-property: box-shadow, transform;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  overflow: auto;
+}
+
+.sidebar--shown {
+  transform: translateX(260px);
+}
+
+.sidebar-menu {
+
+}

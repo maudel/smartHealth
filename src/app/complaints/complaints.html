@@ -1,0 +1,71 @@
+<div>
+  <div flex-container="row" flex-column="12">
+
+    <div flex-item="6" class="p+ bgc-white-2">
+      <h2 class="tc-green-400">Datos de la denuncia</h2>
+      <lx-text-field lx-label="Título" lx-allow-clear="true">
+        <input type="text" ng-model="complaints.complaint.title">
+      </lx-text-field>
+
+      <lx-text-field lx-label="Descripción" lx-allow-clear="true">
+        <input type="text" ng-model="complaints.complaint.description">
+      </lx-text-field>
+
+      <div class="p++ text-center" flex-align="center">
+        <lx-button lx-type="fab" lx-color="green" lx-size="xl" lx-tooltip-position="bottom" lx-tooltip="Adjunte Imagenes">
+          <i class="mdi mdi-image tc-white-1"></i>
+        </lx-button>
+
+        <lx-button lx-type="fab" lx-color="black" lx-ripple="white" lx-size="xl" lx-tooltip-position="bottom" lx-tooltip="Adjunte Videos">
+          <i class="mdi mdi-video"></i>
+        </lx-button>
+
+        <lx-button lx-type="fab" lx-color="red" lx-size="xl" lx-tooltip-position="bottom" lx-tooltip="Adjunte Ubicacion" ng-click="complaints.openDialog()">
+          <i class="mdi mdi-map-marker"></i>
+        </lx-button>
+        <!--<lx-file-input lx-label="Adjunte imagen o video" lx-callback="complaints.manageFile(newFile)"></lx-file-input>-->
+      </div>
+    </div>
+
+    <div flex-item="6" class="p+" ng-class="complaints.anonymous ? 'bgc-black-4 disabled' : 'bgc-white-1'">
+      <div flex-container="row" flex-column="12">
+        <div flex-item="4">
+          <h2 class="tc-green-500">Datos del denunciante</h2>
+        </div>
+        <div flex-item="8">
+          <lx-switch ng-model="complaints.complaint.anonymous" class="mt+" ng-change="complaints.toggleAnonymous()">
+            <lx-switch-label class="tc-orange-500">Activar denuncia anónima</lx-switch-label>
+            <lx-switch-help class="text-justify">Si quieres puedes hacer tu denuncia de manera anónima, no es obligatorio llenar los campos con tus datos personales.</lx-switch-help>
+          </lx-switch>
+        </div>
+      </div>
+
+
+
+      <lx-text-field lx-label="Nombre" ng-disabled="complaints.anonymous" lx-allow-clear="true">
+        <input type="text" ng-model="complaints.complaint.name">
+      </lx-text-field>
+      <lx-text-field lx-label="Apellido" ng-disabled="complaints.anonymous" lx-allow-clear="true">
+        <input type="text" ng-model="complaints.complaint.lastName">
+      </lx-text-field>
+      <lx-text-field lx-label="# Carnet de Identidad" ng-disabled="complaints.anonymous" lx-allow-clear="true">
+        <input type="text" ng-model="complaints.complaint.ci">
+      </lx-text-field>
+      <lx-text-field lx-label="Correo" ng-disabled="complaints.anonymous" lx-allow-clear="true">
+        <input type="text" ng-model="complaints.complaint.email">
+      </lx-text-field>
+    </div>
+  </div>
+
+  <select-location></select-location>
+
+  <!--<div flex-container="row" flex-column="12" class="p+">-->
+    <!--<div map-lazy-load="https://maps.google.com/maps/api/js" flex-item="12">-->
+      <!--<ng-map center="41,-87" zoom="3"></ng-map>-->
+    <!--</div>-->
+  <!--</div>-->
+
+  <div flex-container="row" flex-align="center" class="p+ text-center">
+    <lx-button lx-color="blue">Denuncia Ya!</lx-button>
+  </div>
+</div>
